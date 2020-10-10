@@ -16,7 +16,8 @@ public class CaesarCipher extends Cipher {
     }
 
     //Methods
-    void encrypt(){
+    @Override
+    void encrpyt() {
         int length = plainText.length();
         char[] temp = new char[length];
         temp = plainText.toCharArray();
@@ -83,12 +84,4 @@ public class CaesarCipher extends Cipher {
         swiftValue = maxIndex + 1;
         this.decrypt();
     }
-
-    public String getEncryptedText(){
-        return encryptedText;
-    }
-    public String getPlainText(){
-        return  plainText;
-    }
-
 }

@@ -1,6 +1,6 @@
 package com.shadowthrones.ciphers;
 
-public class Cipher {
+public abstract class Cipher {
     String plainText;
     String encryptedText;
 
@@ -8,5 +8,13 @@ public class Cipher {
     Cipher(String plainText, String encryptedText){
         this.plainText = plainText;
         this.encryptedText = encryptedText;
+    }
+    abstract void encrpyt();
+    abstract void decrypt();
+    public String getEncryptedText(){
+        return encryptedText;
+    }
+    public String getPlainText(){
+        return  plainText;
     }
 }
